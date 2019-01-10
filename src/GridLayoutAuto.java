@@ -80,6 +80,8 @@ public class GridLayoutAuto extends JFrame implements ActionListener
                instructionsText.setText("File Selected: " + imageFile.getName());
                try
                {
+                  // Todo: Adjust how scaling the picture is handled to maintain aspect ratio
+                  //       based on area... See python version.
                   picture = ImageIO.read(imageFile);
                   picture = picture.getScaledInstance(100, ((picture.getHeight(null) * 100) / picture.getWidth(null)), Image.SCALE_DEFAULT);
                } 
